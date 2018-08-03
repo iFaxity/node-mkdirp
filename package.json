@@ -1,0 +1,11 @@
+{
+  "name": "@ifaxity/mkdirp",
+  "version": "1.0.0",
+  "description": "A promise based implementation of the bash command mkdir -p",
+  "main": "main.js",
+  "author": "iFaxity <izze96@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8"
+  }
+}
