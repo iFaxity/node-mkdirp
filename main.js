@@ -17,18 +17,17 @@ module.exports = async function mkdirp(dirpath, mode = 0777) {
     if(ex.code == 'ENOENT') {
       await mkdirp(path.dirname(dirpath), mode);
       return await mkdirp(dirpath, mode);
-    }
-    else {
+    } else {
       // In the case of any other error, just see if there's a dir there already.
       try {
         // Check if something else is borker or if directory already exists
-        const stat = await stat(dirpath);
-        if(!stat.isDirectory()) throw ex;
+        const dirstat = await stat(dirpath);
+        if(!dirstat.isDirectory()) throw ex;
 
         // Directory exists already yay! report that none was created
         return false;
-      } catch(err) {
-        // If stat fails then throw it for weirdness
+      } catch(_) {
+        // If stat fails then throw first exception it's for weirdness
         throw ex;
       }
     }
