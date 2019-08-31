@@ -1,10 +1,13 @@
 {
   "name": "@ifaxity/mkdirp",
-  "version": "1.0.1",
-  "description": "A promise based implementation of the bash command mkdir -p",
+  "version": "1.0.2",
+  "description": "A async based implementation of a recursive mkdir function.",
   "main": "main.js",
-  "author": "iFaxity <izze96@gmail.com>",
+  "author": "Christian Norrman <christian@faxity.se>",
   "license": "MIT",
+  "files": [
+    "main.js"
+  ],
   "engines": {
     "node": ">= 8"
   }
